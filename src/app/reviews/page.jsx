@@ -2,7 +2,9 @@ import React from "react";
 import ReviewsPage from "./ReviewPage";
 
 export const metadata = {
-  title: "Review Page",
+  title: {
+    absolute: "Satisfied Users",
+  },
   description: "The best fast food noakhali",
 };
 

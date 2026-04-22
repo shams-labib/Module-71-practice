@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import CartProvider from "@/context/CartProvider";
@@ -22,12 +22,15 @@ export const metadata = {
   description: "The best fast food noakhali",
 };
 
+const poppins = Poppins({
+  weight: ["600", "500", "300"],
+  subsets: ["latin"],
+});
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${poppins.className} antialiased`}>
         <header className="px-5 py-2 flex  items-center justify-between gap-5 bg-stone-800">
           <Link href="/">
             {/* <img src="/logo.png" alt="" className="w-[120px]" /> */}

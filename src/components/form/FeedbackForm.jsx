@@ -6,7 +6,7 @@ const FeedbackForm = () => {
     e.preventDefault();
     const message = e.target.form.value;
 
-    const res = await fetch("http://localhost:3000/api/feedback", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/feedback`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
